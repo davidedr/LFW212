@@ -31,9 +31,11 @@ const root = `<html>
 </html>`
 
 const server = http.createServer((req, res) => { res.setHeader('ContentType', 'text/html')
+	debugger;
 	if (req.method !== 'GET') {
 		res.stastusCode = 405
 		res.end(STATUS_CODES[res.stastusCode] + '\r\n')
+		return
 	}
 	const { pathname } = url.parse(req.url)
 	if (pathname === '/') {
