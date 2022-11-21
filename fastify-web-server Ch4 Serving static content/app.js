@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-const AutoLoad = require('@fastify/autoload')
+const AutoLoad = require('fastify-autoload')
 
 const dev = process.env.NODE_ENV !== 'production'
 const fastifyStatic = dev && require('fastify-static')
