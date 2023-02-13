@@ -1,22 +1,9 @@
-'use strict'
-const { Router } = require('express')
-const router = Router()
+var express = require('express');
+var router = express.Router();
 
-const root = `<html>
-<head>
-  <style>
-   body { background: #333; margin: 1.25rem }
-   a { color: yellow; font-size: 2rem; font-family: sans-serif }
-  </style>
-</head>
-<body>
-  <a href='/'>/</a>
-</body>
-</html>
-`
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 
-router.get('/', (req, res) => {
-    res.send(root)
-})
-
-module.exports = router
+module.exports = router;
