@@ -17,7 +17,9 @@ function bicycleModel() {
 
     function read(id, cb) {
         if (!(db.hasOwnProperty(id))) {
-            const err = Error('not found!')
+            //const err = Error(`id: ${id} not found!`)
+            const err = Error("not found!")
+            console.log('read', err)
             setImmediate(() => cb(err))
             return
         }

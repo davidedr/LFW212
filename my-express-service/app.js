@@ -25,9 +25,21 @@ app.use('/users', usersRouter);
 app.use('/bicycle', bicycleRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+/* app.use(function(req, res, next) {
     next(createError(404));
-});
+}); */
+
+// Middleware to produce a JSON response error
+app.use(function(err, req, res, next) {
+    console.log(`**use, err: ${err}`)
+    res.status(err.status || 500)
+    res.send({
+        type: 'error',
+        status: err.status,
+        message: err.message,
+        stack: req.app.get('env') === 'development' ? err.stack : undefined
+    });
+})
 
 // error handler
 app.use(function(err, req, res, next) {
