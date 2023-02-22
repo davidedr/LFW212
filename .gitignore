@@ -10,3 +10,5 @@ my-service/node_modules
 my-express-service-Implementing POST, PUT and DELETE with Express/node_modules
 "Consuming and Aggregating Services"/consuming-service/node_modules
 my-route-proxy/node_modules
+my-proxy/node_modules
+my-express-service-route-validation-with-express/node_modules
