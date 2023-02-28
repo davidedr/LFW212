@@ -20,7 +20,8 @@
     "fastify": "^3.29.5",
     "fastify-cli": "^4.4.0",
     "fastify-http-proxy": "^6.3.0",
-    "fastify-plugin": "^3.0.0"
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.2.0"
   },
   "devDependencies": {
     "tap": "^16.1.0"
